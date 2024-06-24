@@ -1,15 +1,15 @@
 upTo = 20 # Only 1 to 20 inclusive
 myList = []
 
-for x in range(0, upToo + 1):
+for x in range(1, upTo + 1):
     # % is called modulo. it return 0 if a number is divisible by a number.
     # in this case we are saying is x divisible by 3 and divisible by 5
-    if x%3=0 and x%5==0:
+    if x%3==0 and x%5==0:
         myList.append ("fizzbuzz!")
     elif x%3==0:
         myList.append ("fizz")
     elif x%5==0:
-        myListappend ("buzz")
+        myList.append ("buzz")
     else:
         myList.append (x)
 
