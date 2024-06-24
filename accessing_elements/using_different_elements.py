@@ -16,20 +16,27 @@ class MyClass:
     def my_class_function (self):
         return "From Class Function: " + self.myStringVariable
 
-# Add to the following print, the combined dictionary string to say Hello World!
-print ()
+    @staticmethod
+    def add (x,y):
+        return x + y
 
+# Add to the following print, the combined dictionary string to say Hello World!
+print (dictionaryElement["key1"], dictionaryElement["key2"])
 # Add to the following print, the combined list to say Hello World!
-print ()
+print(" ".join(listElement))
 
 # Add to the following print, the function to print out its return string
-print ())
+print(my_function())
 
 # Declaring the class
 A = MyClass()
 
+result=A.add(1,2)
+print(result)
 # Add to the following print, the class variable myStringVariable
-print ()
+print(A.myStringVariable)
 
 # Add to the following print, the class function to print out its return string
-print ()
+print (A.my_class_function())
+
+
