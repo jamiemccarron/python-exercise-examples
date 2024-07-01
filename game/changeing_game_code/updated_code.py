@@ -9,7 +9,26 @@ a=random.randint(1,2)
 
 def UserChoice(traverleschoice):
     while True:
-        user_answer=int(input("enter your choice"))
+        user_answer_string = input("enter your choice")
+        valid_characters = ['1','2', '3']
+
+        valid = True
+        for i in user_answer_string:
+            valid_character = False
+            for j in valid_characters:
+                if i == j:
+                    valid_character = True
+                    break
+
+            if not valid_character:
+                valid = False
+                break
+
+        if not valid:
+            print("invalid choice")
+            continue
+
+        user_answer = int (user_answer_string)
         if user_answer==0:
             return "invalid answer"
         elif user_answer > traverleschoice:
@@ -18,9 +37,9 @@ def UserChoice(traverleschoice):
             return user_answer
 def action1():
     print("you are a travller walking through a mysterious twon and all of a sudden you see a car")
-    print("you see the cars door open")
+    print("you see the cars door is open")
     print("what do you do")
-    print("(1) steal the car")
+    print("(1)steal the car")
     print("(2)protect the car from being stolen")
     print("(3)walk away and forget about the car")
     user_answer=UserChoice(3)
@@ -175,6 +194,16 @@ def action21():
     exit_code()
 
 user_action=[action1,action2,action3,action4,action5,action6,action7,action8,action9,action10,action11,action12,action13,action14,action15,action16,action17,action18,action19,action20,action21]
+
+
+
+game = {
+    'room1': {
+
+    }
+}
+
+
 def main():
     print("starting the game")
 
